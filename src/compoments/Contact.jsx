@@ -13,11 +13,11 @@ const Contact = () => {
       <div className="relative rounded-lg bg-black py-24 text-blue-50 sm:overflow-hidden">
         <div className="absolute -left-20 top-0 hidden h-full w-72 overflow-hidden sm:block lg:left-20 lg:w-96">
           <ImageClipBox
-            src="/img/silkart1.png"
+            src="img/silkart1.png"
             clipClass="contact-clip-path-1"
           />
           <ImageClipBox
-            src="/img/contact-2.webp"
+            src="img/contact-2.webp"
             clipClass="contact-clip-path-2 lg:translate-y-40 translate-y-60"
           />
         </div>
@@ -28,7 +28,7 @@ const Contact = () => {
             clipClass="absolute md:scale-125"
           /> */}
           <ImageClipBox
-            src="/img/silkart3.jpg"
+            src="img/silkart3.jpg"
             clipClass="sword-man-clip-path md:scale-12 "
           />
         </div>
