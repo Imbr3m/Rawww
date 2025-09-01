@@ -4,6 +4,8 @@ import About from './compoments/About'
 import Navbar from './compoments/Navbar'
 import Features from './compoments/Features'
 import Story from './compoments/Story'
+import Contact from './compoments/Contact'
+import Footer from './compoments/Footer'
 
 const App = () => {
   return (
@@ -13,6 +15,8 @@ const App = () => {
       <About />
       <Features />
       <Story />
+      <Contact />
+      <Footer />
     </main>
   )
 }
