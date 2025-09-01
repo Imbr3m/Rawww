@@ -9,14 +9,15 @@ gsap.registerPlugin(ScrollTrigger)
 
 const Hero = () => {
 
+
     const [currentIndex, setCurrentIndex] = useState(1)
+    const [bgVideoIndex, setBgVideoIndex] = useState(1)
     const [hasClicked, setHasClicked] = useState(false)
     const [isLoading, setIsLoading] = useState(true)
     const [loadedVideos, setLoadedVideos] = useState(0)
 
     const totalVideos = 5;
     const nextVideoRef = useRef(null)
-    
 
     const handleVideoLoad = () => {
         setLoadedVideos((prev) => prev + 1)
@@ -27,6 +28,10 @@ const Hero = () => {
     const handleMiniVdClick = () => {
         setHasClicked(true)
         setCurrentIndex(upcomingVideoIndex)
+        // Delay updating background video until animation finishes
+        setTimeout(() => {
+            setBgVideoIndex(upcomingVideoIndex)
+        }, 1000); // 1s matches GSAP duration
     }
 
     // this thing keeps tototo
@@ -48,7 +53,8 @@ const Hero = () => {
                 height: '100%',
                 duration: 1,
                 ease: 'power1.inOut',
-                onStart: () => nextVideoRef.current.play()
+                onStart: () => nextVideoRef.current.play(),
+                // onComplete: () => setBgVideoIndex(currentIndex) // handled by setTimeout in click
             })
 
             gsap.from('#current-video', {
@@ -111,7 +117,7 @@ const Hero = () => {
                     <video ref={nextVideoRef} src={getVideoSrc(currentIndex)}
                     loop id="next-video" muted className="absolute-center invisible absolute z-20 size-64 object-center object-cover" onLoadedData={handleVideoLoad}/>
                     
-                    <video src={getVideoSrc(currentIndex === totalVideos - 1 ? 1 : currentIndex)}
+                    <video src={getVideoSrc(bgVideoIndex === totalVideos - 1 ? 1 : bgVideoIndex)}
                     autoPlay loop muted className="absolute left-0 top-0 size-full object-cover object-center" onLoadedData={handleVideoLoad}/>
                 </div>
                 {/* silksong img */}
