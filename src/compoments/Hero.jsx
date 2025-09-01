@@ -29,6 +29,7 @@ const Hero = () => {
         setCurrentIndex(upcomingVideoIndex)
     }
 
+    // this thing keeps tototo
     useEffect(() => {
         if(loadedVideos === totalVideos -1) {
             setIsLoading(false)
@@ -85,7 +86,8 @@ const Hero = () => {
     return (
         <div className="relative h-dvh w-screen overflow-x-hidden">
             
-            {isLoading && (
+            {/* This thing keeps appearing so imma comment it for now */}
+            {/* {isLoading && (
                 <div className="flex-center absolute z-[100] h-dvh w-screen overflow-hidden bg-violet-50">
                     <div className="three-body">
                         <div className="three-body__dot"></div>
@@ -93,7 +95,8 @@ const Hero = () => {
                         <div className="three-body__dot"></div>
                     </div>
                 </div>
-            )}
+            )} */}
+
             <div id="video-frame" className="relative z-10 h-dvh w-screen overflow-hidden rounded-lg bg-blue-75">
                 <div>
                     <div className="mask-clip-path absolute-center absolute z-50 size-64 cursor-pointer overflow-hidden rounded-lg">
@@ -121,7 +124,7 @@ const Hero = () => {
                         <p className="mb-5 max-w-64 font-robert-regular text-blue-100">Omg its finally here <br />
                         Please buy me the game pls</p>
 
-                        <Button id="watch-trailer" title="Watch Trailer" leftIcon={<TiLocationArrow />} containerClass="!bg-yellow-300 flex-center gap-1"/>
+                        <Button id="watch-trailer" title="Watch Trailer" leftIcon={<TiLocationArrow />} containerClass="!bg-wine-50 flex-center gap-1 text-blue-50" onClick={() => window.open("https://youtu.be/6XGeJwsUP9c?si=CpPWph1PgftNmFUr", "_blank")}/>
                     </div>
                 </div>
             </div>

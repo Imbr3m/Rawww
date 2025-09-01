@@ -4,7 +4,7 @@ import { TiLocationArrow } from 'react-icons/ti'
 import { useWindowScroll } from 'react-use'
 import gsap from 'gsap'
 
-const navItems = ['Nexus', 'Vault', 'Prolouge', 'About', 'Contact']
+const navItems = ['Steam', 'About', 'Features', 'Story', 'Download']
 
 
 const Navbar = () => {
@@ -14,6 +14,7 @@ const Navbar = () => {
     const navContainerRef = useRef(null)
     const audioElementRef = useRef(null)
 
+    // nav dissapearing when scroll
     const [lastScrollY, setLastScrollY] = useState(0)
     const [isNavVisable, setIsNavVisable] = useState(true)
     const { y: currentScrollY} = useWindowScroll();
@@ -53,17 +54,19 @@ const Navbar = () => {
         }
     }, [isAudioPlaying])
 
+    const hollowSvg = <img className='w-5' src="https://img.icons8.com/wired/64/hollow-knight.png" alt="hollow-knight"/>
+
   return (
     <div ref={navContainerRef} className='fixed inset-x-0 top-4 z-50 h-16 border-none transition-all duration-700 sm:inset-x-6'>
         <header className='absolute top-1/2 w-full -translate-y-1/2'>
             <nav className='flex size-full items-center justify-between p-4'>
                 <div className='flex items-center gap-7'>
-                    <img src="/img/logo.png" alt="logo" className='w-10'/>
+                    <img src="/img/logo.png" alt="logo" className='w-10 cursor-pointer' onClick={() => window.open('https://www.hollowknight.com/', "_blank")}/>
 
                     <Button 
                     id='product-button' 
-                    title='Products' 
-                    righticon={<TiLocationArrow />} containerClass='bg-blue-50 md:flex hidden items-center justify-center gap-1'/>
+                    title='Download' 
+                    righticon={hollowSvg} containerClass='bg-blue-50 md:flex hidden items-center justify-center gap-1' onClick={() => window.open('https://www.teamcherry.com.au/', "_blank")}/>
                 </div>
 
                 <div className='flex h-full items-center'>
