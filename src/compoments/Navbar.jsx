@@ -4,7 +4,7 @@ import { TiLocationArrow } from 'react-icons/ti'
 import { useWindowScroll } from 'react-use'
 import gsap from 'gsap'
 
-const navItems = ['Steam', 'About', 'Features', 'Story', 'Download']
+const navItems = ['About', 'Features', 'Begging', 'Download']
 
 
 const Navbar = () => {
@@ -61,19 +61,19 @@ const Navbar = () => {
         <header className='absolute top-1/2 w-full -translate-y-1/2'>
             <nav className='flex size-full items-center justify-between p-4'>
                 <div className='flex items-center gap-7'>
-                    <img src="/img/logo.png" alt="logo" className='w-10 cursor-pointer' onClick={() => window.open('https://www.hollowknight.com/', "_blank")}/>
+                    <img src="/img/logo.png" alt="logo" className='w-10 cursor-pointer' onClick={() => window.open('https://www.teamcherry.com.au//', "_blank")}/>
 
                     <Button 
                     id='product-button' 
                     title='Download' 
-                    righticon={hollowSvg} containerClass='bg-blue-50 md:flex hidden items-center justify-center gap-1' onClick={() => window.open('https://www.teamcherry.com.au/', "_blank")}/>
+                    righticon={hollowSvg} containerClass='bg-blue-50 md:flex hidden items-center justify-center gap-1' onClick={() => window.open('https://www.hollowknight.com/', "_blank")}/>
                 </div>
 
                 <div className='flex h-full items-center'>
                     {/* will be hidden on smaller devices */}
                     <div className='hidden md:block'>
                         {navItems.map((item) => (
-                            <a key={item} className='nav-hover-btn' href={`#${item.toLowerCase()}`}>
+                            <a key={item} className='nav-hover-btn !font-hollow' href={`#${item.toLowerCase()}`}>
                                 {item}
                             </a>
                         ))}

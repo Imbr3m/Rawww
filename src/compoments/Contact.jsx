@@ -45,7 +45,7 @@ const Contact = () => {
 
           <img src="/img/silksong_logo.png" alt="silksong logo" className="z-[100] w-[18rem] sm:w-[20rem] md:w-[25rem] lg:w-[30rem]"/>
 
-          <Button title="Download Now" containerClass="mt-10 cursor-pointer" />
+          <Button title="Download Now" containerClass="mt-10 cursor-pointer" onClick={() => window.open('https://store.steampowered.com/app/1030300/Hollow_Knight_Silksong//', "_blank")}/>
         </div>
       </div>
     </div>
