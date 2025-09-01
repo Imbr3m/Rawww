@@ -7,6 +7,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
+        hollow: ["hollow, sans-serif"],
         zentry: ["zentry", "sans-serif"],
         general: ["general", "sans-serif"],
         "circular-web": ["circular-web", "sans-serif"],

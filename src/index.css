@@ -36,6 +36,11 @@ body {
     font-family: "zentry";
     src: url("/fonts/zentry-regular.woff2") format("woff2");
   }
+
+  @font-face {
+    font-family: "hollow";
+    src: url("/fonts/trojan.ttf") format("truetype");
+  }
 }
 
 @layer utilities {
@@ -69,7 +74,7 @@ body {
   }
 
   .hero-heading {
-    @apply uppercase font-zentry font-black text-5xl sm:right-10 sm:text-7xl md:text-9xl lg:text-[12rem];
+    @apply uppercase font-hollow font-black tracking-tighter text-5xl sm:right-10 sm:text-5xl md:text-6xl lg:text-[5rem];
   }
 
   .about-subtext {

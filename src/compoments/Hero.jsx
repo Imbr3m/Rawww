@@ -14,7 +14,7 @@ const Hero = () => {
     const [isLoading, setIsLoading] = useState(true)
     const [loadedVideos, setLoadedVideos] = useState(0)
 
-    const totalVideos = 4;
+    const totalVideos = 5;
     const nextVideoRef = useRef(null)
     
 
@@ -111,18 +111,23 @@ const Hero = () => {
                     <video src={getVideoSrc(currentIndex === totalVideos - 1 ? 1 : currentIndex)}
                     autoPlay loop muted className="absolute left-0 top-0 size-full object-cover object-center" onLoadedData={handleVideoLoad}/>
                 </div>
-                <h1 className="special-font hero-heading absolute bottom-5 right-5 z-40 text-blue-75">G<b>a</b>ming</h1>
+                {/* silksong img */}
+                <h1 className="special-font hero-heading absolute bottom-5 right-5 z-40 text-blue-75 hidden">Gaming</h1>
+                <img src="img/silksong-white.png" alt="solksong-white" className="absolute bottom-5 right-5 z-40 w-56 lg:w-80 md:w-72 sm:w-60"/>
+
                 <div className="absolute left-0 top-0 z-40 size-full">
                     <div className="mt-24 px-5 sm:px-10">
-                        <h1 className="special-font hero-heading text-blue-100 ">redifi<b>n</b>e</h1>
-                        <p className="mb-5 max-w-64 font-robert-regular text-blue-100">Enter the Metagame Layer <br />
-                        Unleashe the Play Economy</p>
+                        <h1 className="hero-heading text-blue-100 ">Hollow Knight:</h1>
+                        <p className="mb-5 max-w-64 font-robert-regular text-blue-100">Omg its finally here <br />
+                        Please buy me the game pls</p>
 
                         <Button id="watch-trailer" title="Watch Trailer" leftIcon={<TiLocationArrow />} containerClass="!bg-yellow-300 flex-center gap-1"/>
                     </div>
                 </div>
             </div>
-            <h1 className="special-font hero-heading absolute bottom-5 right-5 text-black">G<b>a</b>ming</h1>
+            {/* silksong black */}
+            <h1 className="special-font hero-heading absolute bottom-5 right-5 text-black hidden">Gaming</h1>
+            <img src="img/silksong-black.png" alt="solksong-black" className="absolute bottom-5 right-5 w-56 lg:w-80 md:w-72 sm:w-60"/>
         </div>
     )
 }
