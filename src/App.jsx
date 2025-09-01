@@ -3,6 +3,7 @@ import Hero from './compoments/Hero'
 import About from './compoments/About'
 import Navbar from './compoments/Navbar'
 import Features from './compoments/Features'
+import Story from './compoments/Story'
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
       <Hero />
       <About />
       <Features />
+      <Story />
     </main>
   )
 }
