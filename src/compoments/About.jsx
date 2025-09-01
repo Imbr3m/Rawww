@@ -31,21 +31,20 @@ const About = () => {
     return (
     <div id="about" className="min-h-screen w-screen">
         <div className="relative mb-8 my-36 flex flex-col items-center gap-5">
-            <h2 className="font-general text-sm uppercase md:text-[10px]">Imbr3m is Raining</h2>
+            <h2 className="font-general text-blue-50 text-sm uppercase md:text-[10px]">Made bt Raining</h2>
 
-            <AnimatedTitle title="Disc<b>o</b>ver the world's <br/> l<b>a</b>rgest shared adventure" containerClass={"mt-5 !text-black text-center"}/>
+            <AnimatedTitle title="Ascend to the Peak of a Haunted Kingdom" containerClass={"mt-5 !text-black text-center"}/>
 
-            <div className="about-subtext">
-                <p>The Game of Games begins-your life, now an epic MMORPG</p>
-                <p>Zentry unites every player from countless games and platforms</p>
-
+            <div className="about-subtext !text-blue-50">
+                <p>Hollow Knight: Silksong is the epic sequel to Hollow Knight</p>
+                <p>Fight and survive as you ascend to the peak of a land ruled by silk and song.</p>
             </div>
         </div>
         
         <div className="h-dvh w-screen" id="clip">
             <div className="mask-clip-path about-image">
                 <img 
-                src="img/about.webp" alt="Background" className="absolute top-0 left-0 size-full object-cover" />
+                src="img/about.png" alt="Background" className="absolute top-0 left-0 size-full object-cover" />
             </div>
         </div>
     </div>
